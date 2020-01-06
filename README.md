@@ -1,4 +1,4 @@
-# latex-action [![GitHub Actions Status](https://github.com/dante-ev/latex-action/workflows/Test%20Github%20Action/badge.svg)](https://github.com/dante-ev/latex-action/actions)
+# latex-action [![GitHub Actions Status](https://github.com/matsavage/latex-action/workflows/Test%20Github%20Action/badge.svg)](https://github.com/matsavage/latex-action/actions)
 
 > GitHub Action to compile LaTeX documents.
 
