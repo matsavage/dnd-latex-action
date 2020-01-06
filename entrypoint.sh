@@ -20,6 +20,9 @@ if [ -n "$working_directory" ]; then
   cd "$working_directory"
 fi
 
+tlmgr conf
+tlmgr list --only-installed
+
 echo "$(kpsewhich -var-value TEXMFLOCAL)/tex/latex/local/"
 ls -la "$(kpsewhich -var-value TEXMFLOCAL)/tex/latex/local/"
 ls -la "$(kpsewhich -var-value TEXMFLOCAL)/tex/latex/local/dnd"
