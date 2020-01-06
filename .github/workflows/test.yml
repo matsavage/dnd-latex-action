@@ -7,10 +7,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-#      - name: Set up Git repository
-#        uses: actions/checkout@master
-      - name: Git Submodules Init
-        uses: chris-short/github-action-git-submodules@v0.1.0
+      - name: Set up Git repository
+        uses: actions/checkout@master
       - name: Compile basic LaTeX document
         uses: ./
         with:
