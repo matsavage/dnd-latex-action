@@ -20,4 +20,8 @@ if [ -n "$working_directory" ]; then
   cd "$working_directory"
 fi
 
+echo "$(kpsewhich -var-value TEXMFHOME)/tex/latex/"
+ls -la "$(kpsewhich -var-value TEXMFHOME)/tex/latex/"
+ls -la "$(kpsewhich -var-value TEXMFHOME)/tex/latex/dnd"
+
 "$compiler" $args "$root_file"
