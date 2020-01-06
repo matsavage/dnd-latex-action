@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v1
+        with:
+          submodules: true
       - name: Compile basic LaTeX document
         uses: ./
         with:
@@ -20,6 +22,13 @@ jobs:
           root_file: test.tex
           working_directory: test/
           compiler: lualatex
+          args: -file-line-error -interaction=nonstopmode
+      - name: Compile basic LaTeX document with XeLaTeX
+        uses: ./
+        with:
+          root_file: test.tex
+          working_directory: test/
+          compiler: xelatex
           args: -file-line-error -interaction=nonstopmode
       - name: Compile LaTeX document with math symbols
         uses: ./
@@ -39,6 +48,13 @@ jobs:
           working_directory: test/
           extra_system_packages: python3-pygments
           args: "-pdf -latexoption=-shell-escape -latexoption=-file-line-error -latexoption=-interaction=nonstopmode"
+      - name: Compile DND template LaTeX document with XeLaTeX
+        uses: ./
+        with:
+          root_file: dnd_class.tex
+          working_directory: test/
+          compiler: xelatex
+          args: -file-line-error -interaction=nonstopmode
       - name: Check pdf files
         run: |
           set -e
