@@ -23,9 +23,19 @@ fi
 
 export TEXMFHOME=$(kpsewhich -var-value TEXMFLOCAL)
 
-for i in `seq 1 $runs`
-do
-  echo $i
-  "$compiler" $args "$root_file"
-done
+if [ -n "$root_file" ]; then
+  for i in `seq 1 $runs`
+  do
+    "$compiler" $args "$root_file"
+  done
+else
+  for file in `ls *.tex`
+  do
+    for i in `seq 1 $runs`
+    do
+      "$compiler" $args "$file"
+    done
+  done
+fi
+
 
