@@ -22,6 +22,6 @@ fi
 
 echo "$(kpsewhich -var-value TEXMFLOCAL)/tex/latex/local/"
 ls -la "$(kpsewhich -var-value TEXMFLOCAL)/tex/latex/local/"
-ls -la "$(kpsewhich -var-value TEXMFLOCAL)/tex/latexlocal/dnd"
+ls -la "$(kpsewhich -var-value TEXMFLOCAL)/tex/latex/local/dnd"
 
 "$compiler" $args "$root_file"
