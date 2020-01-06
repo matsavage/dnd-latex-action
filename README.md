@@ -8,7 +8,7 @@ This actions runs on docker using a [maximal TeXLive environment](https://hub.do
 
 * `root_file`
 
-    The root LaTeX file to be compiled. This input is required.
+    The root LaTeX file to be compiled. If unset, will run on all .tex files in the working_directory.
 
 * `working_directory`
 
@@ -29,7 +29,7 @@ This actions runs on docker using a [maximal TeXLive environment](https://hub.do
 * `runs`
 
     Number of times to run the compilation.
-    
+
 ## Example
 
 ```yaml

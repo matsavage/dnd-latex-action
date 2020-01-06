@@ -16,6 +16,22 @@ jobs:
         with:
           root_file: test.tex
           working_directory: test/
+      - name: Compile basic LaTeX document twice
+        uses: ./
+        with:
+          root_file: test.tex
+          working_directory: test/
+          runs: 2
+      - name: Compile directory of basic LaTeX documents
+        uses: ./
+        with:
+          working_directory: test/test_directory
+      - name: Check pdf files
+        run: |
+          set -e
+          file test/test_directory/test_1.pdf | grep -q ' PDF '
+          file test/test_directory/test_2.pdf | grep -q ' PDF '
+          file test/test_directory/test_3.pdf | grep -q ' PDF '
       - name: Compile basic LaTeX document with lualatex
         uses: ./
         with:

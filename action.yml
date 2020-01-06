@@ -3,8 +3,8 @@ description: Compiles latex documents using pdflatex, lualatex, xelatex. Full Te
 author: Cheng XU, Oliver Kopp
 inputs:
   root_file:
-    description: The root LaTeX file to be compiled
-    required: true
+    description: The root LaTeX file to be compiled, if unset will run on all .tex documents in the working_directory
+    required: false
   working_directory:
     description: The working directory for the latex compiler to be invoked
   compiler:
