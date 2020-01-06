@@ -10,7 +10,7 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v1
         with:
-          submodules: false
+          submodules: true
       - name: Compile basic LaTeX document
         uses: ./
         with:
