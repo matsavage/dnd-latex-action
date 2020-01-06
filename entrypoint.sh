@@ -20,9 +20,4 @@ if [ -n "$working_directory" ]; then
   cd "$working_directory"
 fi
 
-tlmgr conf
-
-ls -la /root/texmf/tex/latex/dnd
-ls -la /root/texmf/tex/latex/dnd
-
 "$compiler" $args "$root_file"
