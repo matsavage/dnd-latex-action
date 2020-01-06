@@ -20,8 +20,8 @@ if [ -n "$working_directory" ]; then
   cd "$working_directory"
 fi
 
-echo "$(kpsewhich -var-value TEXMFLOCAL)/tex/latex/"
-ls -la "$(kpsewhich -var-value TEXMFLOCAL)/tex/latex/"
-ls -la "$(kpsewhich -var-value TEXMFLOCAL)/tex/latex/dnd"
+echo "$(kpsewhich -var-value TEXMFLOCAL)/tex/latex/local/"
+ls -la "$(kpsewhich -var-value TEXMFLOCAL)/tex/latex/local/"
+ls -la "$(kpsewhich -var-value TEXMFLOCAL)/tex/latexlocal/dnd"
 
 "$compiler" $args "$root_file"
