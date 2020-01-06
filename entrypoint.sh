@@ -7,6 +7,7 @@ working_directory="$2"
 compiler="$3"
 args="$4"
 extra_system_packages="$5"
+runs="$6"
 
 if [ -n "$extra_system_packages" ]; then
   apt-get update
@@ -22,4 +23,9 @@ fi
 
 export TEXMFHOME=$(kpsewhich -var-value TEXMFLOCAL)
 
-"$compiler" $args "$root_file"
+for i in `seq 1 $runs`
+do
+  echo $i
+  "$compiler" $args "$root_file"
+done
+

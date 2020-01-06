@@ -26,6 +26,10 @@ This actions runs on docker using a [maximal TeXLive environment](https://hub.do
 
     The extra packages to be installed by [`apt-get`](https://en.wikipedia.org/wiki/APT_(Package_Manager)) separated by space.
 
+* `runs`
+
+    Number of times to run the compilation.
+    
 ## Example
 
 ```yaml
