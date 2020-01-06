@@ -20,6 +20,7 @@ if [ -n "$working_directory" ]; then
   cd "$working_directory"
 fi
 
+ls -la $(kpsewhich -var-value TEXMFLOCAL)
 export TEXMFHOME=$(kpsewhich -var-value TEXMFLOCAL)
 
 "$compiler" $args "$root_file"
