@@ -21,10 +21,12 @@ if [ -n "$working_directory" ]; then
 fi
 
 tlmgr conf
-tlmgr list --only-installed
 
 echo "$(kpsewhich -var-value TEXMFLOCAL)/tex/latex/local/"
 ls -la "$(kpsewhich -var-value TEXMFLOCAL)/tex/latex/local/"
 ls -la "$(kpsewhich -var-value TEXMFLOCAL)/tex/latex/local/dnd"
+
+echo "$(kpsewhich -var-value TEXMFHOME)"
+ls -la "$(kpsewhich -var-value TEXMFHOME)
 
 "$compiler" $args "$root_file"
