@@ -11,18 +11,18 @@ jobs:
         uses: actions/checkout@v1
         with:
           submodules: true
-      - name: Compile basic LaTeX document
-        uses: ./
-        with:
-          root_file: test.tex
-          working_directory: test/
-      - name: Compile basic LaTeX document with lualatex
-        uses: ./
-        with:
-          root_file: test.tex
-          working_directory: test/
-          compiler: lualatex
-          args: -file-line-error -interaction=nonstopmode
+#      - name: Compile basic LaTeX document
+#        uses: ./
+#        with:
+#          root_file: test.tex
+#          working_directory: test/
+#      - name: Compile basic LaTeX document with lualatex
+#        uses: ./
+#        with:
+#          root_file: test.tex
+#          working_directory: test/
+#          compiler: lualatex
+#          args: -file-line-error -interaction=nonstopmode
       - name: Compile basic LaTeX document with XeLaTeX
         uses: ./
         with:
@@ -30,24 +30,24 @@ jobs:
           working_directory: test/
           compiler: xelatex
           args: -file-line-error -interaction=nonstopmode
-      - name: Compile LaTeX document with math symbols
-        uses: ./
-        with:
-          root_file: math.tex
-          working_directory: test/
-      - name: Compile LaTeX document with biblatex/biber
-        uses: ./
-        with:
-          root_file: biblatex.tex
-          working_directory: test/
-          extra_packages: biblatex-ieee
-      - name: Compile LaTeX document with minted
-        uses: ./
-        with:
-          root_file: minted.tex
-          working_directory: test/
-          extra_system_packages: python3-pygments
-          args: "-pdf -latexoption=-shell-escape -latexoption=-file-line-error -latexoption=-interaction=nonstopmode"
+#      - name: Compile LaTeX document with math symbols
+#        uses: ./
+#        with:
+#          root_file: math.tex
+#          working_directory: test/
+#      - name: Compile LaTeX document with biblatex/biber
+#        uses: ./
+#        with:
+#          root_file: biblatex.tex
+#          working_directory: test/
+#          extra_packages: biblatex-ieee
+#      - name: Compile LaTeX document with minted
+#        uses: ./
+#        with:
+#          root_file: minted.tex
+#          working_directory: test/
+#          extra_system_packages: python3-pygments
+#          args: "-pdf -latexoption=-shell-escape -latexoption=-file-line-error -latexoption=-interaction=nonstopmode"
       - name: Compile DND template LaTeX document with XeLaTeX
         uses: ./
         with:
@@ -55,10 +55,10 @@ jobs:
           working_directory: test/
           compiler: xelatex
           args: -file-line-error -interaction=nonstopmode
-      - name: Check pdf files
-        run: |
-          set -e
-          file test/test.pdf | grep -q ' PDF '
-          file test/math.pdf | grep -q ' PDF '
-          file test/biblatex.pdf | grep -q ' PDF '
-          file test/minted.pdf | grep -q ' PDF '
+ #     - name: Check pdf files
+ #       run: |
+ #         set -e
+ #         file test/test.pdf | grep -q ' PDF '
+ #         file test/math.pdf | grep -q ' PDF '
+ #         file test/biblatex.pdf | grep -q ' PDF '
+ #         file test/minted.pdf | grep -q ' PDF '
