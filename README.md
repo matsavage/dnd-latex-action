@@ -1,4 +1,4 @@
-# latex-action [![GitHub Actions Status](https://github.com/dante-ev/latex-action/workflows/Test%20Github%20Action/badge.svg)](https://github.com/dante-ev/latex-action/actions)
+# latex-action [![GitHub Actions Status](https://github.com/matsavage/latex-action/workflows/Test%20Github%20Action/badge.svg)](https://github.com/matsavage/latex-action/actions)
 
 > GitHub Action to compile LaTeX documents.
 
@@ -8,7 +8,7 @@ This actions runs on docker using a [maximal TeXLive environment](https://hub.do
 
 * `root_file`
 
-    The root LaTeX file to be compiled. This input is required.
+    The root LaTeX file to be compiled. If unset, will run on all .tex files in the working_directory.
 
 * `working_directory`
 
@@ -25,6 +25,10 @@ This actions runs on docker using a [maximal TeXLive environment](https://hub.do
 * `extra_system_packages`
 
     The extra packages to be installed by [`apt-get`](https://en.wikipedia.org/wiki/APT_(Package_Manager)) separated by space.
+
+* `runs`
+
+    Number of times to run the compilation.
 
 ## Example
 
