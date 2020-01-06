@@ -20,6 +20,8 @@ if [ -n "$working_directory" ]; then
   cd "$working_directory"
 fi
 
+
+export TEXMFHOME=$(kpsewhich -var-value TEXMFLOCAL)
 tlmgr conf
 
 echo "$(kpsewhich -var-value TEXMFLOCAL)/tex/latex/local/"
