@@ -1,8 +1,7 @@
-FROM danteev/texlive:latest
+FROM danteev/texlive:TL2017
 
 WORKDIR /root
 
-RUN apt-get install git
 RUN git clone https://github.com/matsavage/latex-action.git
 WORKDIR /root/latex-action
 RUN git submodule init
