@@ -57,13 +57,13 @@ jobs:
           root_file: biblatex.tex
           working_directory: test/
           extra_packages: biblatex-ieee
-      - name: Compile LaTeX document with minted
-        uses: ./
-        with:
-          root_file: minted.tex
-          working_directory: test/
-          extra_system_packages: python3-pygments
-          args: "-pdf -latexoption=-shell-escape -latexoption=-file-line-error -latexoption=-interaction=nonstopmode"
+#      - name: Compile LaTeX document with minted
+#        uses: ./
+#        with:
+#          root_file: minted.tex
+#          working_directory: test/
+#          extra_system_packages: python3-pygments
+#          args: "-pdf -latexoption=-shell-escape -latexoption=-file-line-error -latexoption=-interaction=nonstopmode"
       - name: Compile DND template LaTeX document with XeLaTeX
         uses: ./
         with:
