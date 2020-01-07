@@ -2,7 +2,7 @@ FROM danteev/texlive:TL2017
 
 WORKDIR /root
 
-RUN git clone https://github.com/matsavage/latex-action.git
+RUN git clone https://github.com/${GITHUB_REPOSITORY}.git
 WORKDIR /root/latex-action
 RUN git submodule init
 RUN git submodule update
