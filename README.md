@@ -2,7 +2,7 @@
 
 > GitHub Action to compile LaTeX documents.
 
-This actions runs on docker using a [maximal TeXLive environment](https://hub.docker.com/r/danteev/texlive/) installed.
+This actions runs on docker using a [maximal TeXLive environment](https://hub.docker.com/r/danteev/texlive/) and the [DnD 5e LaTeX Template](https://github.com/rpgtex/DND-5e-LaTeX-Template/) installed.
 
 ## Inputs
 
