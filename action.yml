@@ -1,4 +1,4 @@
-name: LaTeX compilation
+name: DnD LaTeX compilation
 description: Compiles latex documents using pdflatex, lualatex, xelatex. Full TeXLive distribution.
 author: Cheng XU, Oliver Kopp
 inputs:
